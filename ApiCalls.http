@@ -1,0 +1,16 @@
+#curl -s --head https://iaas.us-phoenix-1.oraclecloud.com | grep Date
+
+# POST https://iaas.us-phoenix-1.oraclecloud.com/20160918/vcns
+# host: iaas.us-phoenix-1.oraclecloud.com
+# opc-retry-token: 239787fs987
+# Content-Type: application/json
+# HTTP headers required for authentication
+# Other HTTP request headers per the HTTP spec
+
+# {
+#   "compartmentId": "ocid1.compartment.oc1..aaaaaaaauwjnv47knr7uuuvqar5bshnspi6xoxsfebh3vy72fi4swgrkvuvq",
+#   "displayName": "Apex Virtual Cloud Network",
+#   "cidrBlock": "172.16.0.0/16"
+# }
+
+GET https://iaas.us-phoenix-1.oraclecloud.com
