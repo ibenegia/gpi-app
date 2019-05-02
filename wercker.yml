@@ -21,7 +21,7 @@ build:
     - internal/docker-build:
         dockerfile: Dockerfile
         # image-name: $WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
-        # image-name: ${DOCKER_REGISTRY}/${DOCKER_REPO}:latest
+        image-name: ${DOCKER_REGISTRY}/${DOCKER_REPO}:latest
         # ports: 6394
         registry-auth-config: |
             {
