@@ -2,7 +2,7 @@ box: python:3.5
 
 build:
     steps:
-      - nton1/oci-cli@1.2.0:
+      - nton1/oci-cli@1.3.0:
           command: stop-db-node
           region: eu-frankfurt-1
           tenancy-ocid: ocid1.tenancy.oc1..aaaaaaaa2jvfyfoc6c4fzxayx4tnisw4tgdmualsijeglyul4llarzkq2zna
@@ -12,3 +12,4 @@ build:
           namespace: odemeasouth
           bucket-name: mybucketname
           node-id: ocid1.dbnode.oc1.eu-frankfurt-1.abtheljsigqob2ech6clgd6im7o4hn4o2uyhhzelj7ftyhydoqggtcb5f4wq
+          pass_phrase: 1van
