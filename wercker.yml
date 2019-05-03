@@ -9,4 +9,5 @@ build:
           user-ocid: ocid1.user.oc1..aaaaaaaakzhfon2xhxveeefpudi6n45te64272ihckrwfnc3tpudcmlqzzuq
           fingerprint: 36:fb:bf:38:5c:79:74:cd:3f:dd:6e:aa:49:81:2b:f2
           api-key: "$(cat oci_api_key.pem)"
-          
+          namespace: odemeasouth
+          bucket-name: mybucketname
