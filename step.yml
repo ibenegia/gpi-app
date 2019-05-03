@@ -1,0 +1,27 @@
+# step.yml
+name: oci-database-service
+version: 1.0.0
+summary: call api to perform differt actions on database service
+tags:
+ - oci
+ - database
+ - api
+properties:
+- name: command
+ type: string
+ required: true
+- name: channel
+ type: string
+ required: false
+- name: username
+ type: string
+ required: false
+- name: notify_on
+ type: string
+ required: false
+- name: icon_url
+ type: string
+ required: false
+- name: branch
+ type: string
+ required: false
