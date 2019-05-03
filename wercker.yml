@@ -2,7 +2,7 @@ box: python:3.5
 
 build:
     steps:
-      - oci-cli:
+      - nton1/oci-cli@1.0.0:
         command: oci-version
         region: eu-frankfurt-1
         tenancy-ocid: ocid1.tenancy.oc1..aaaaaaaa2jvfyfoc6c4fzxayx4tnisw4tgdmualsijeglyul4llarzkq2zna
