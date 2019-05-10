@@ -32,7 +32,7 @@ build:
             }
 # Call database api to stop the running node
   steps:
-      - nton1/oci-cli@1.4.0:
+      - nton1/oci-cli@1.5.0:
           command: stop-db-node
           region: eu-frankfurt-1
           tenancy-ocid: ocid1.tenancy.oc1..aaaaaaaa2jvfyfoc6c4fzxayx4tnisw4tgdmualsijeglyul4llarzkq2zna
@@ -42,7 +42,9 @@ build:
           namespace: odemeasouth
           bucket-name: mybucketname
           node-id: ocid1.dbnode.oc1.eu-frankfurt-1.abtheljsigqob2ech6clgd6im7o4hn4o2uyhhzelj7ftyhydoqggtcb5f4wq
-#Deploy our container from the Oracle Container Registry to the Oracle Container Engine (Kubernetes)
+          database-id: ocid1.database.oc1.eu-frankfurt-1.abtheljsvqnxonamvkhvv4x54giwlay7hu5oqw2e5gu5v5pgghv4u57oaiua
+
+# Deploy our container from the Oracle Container Registry to the Oracle Container Engine (Kubernetes)
 deploy-to-cluster:
 
   steps:
@@ -73,3 +75,17 @@ deploy-to-cluster:
       token: $KUBERNETES_AUTH_TOKEN
       insecure-skip-tls-verify: true
       command: apply -f kubernetes.yml
+
+# Delete deployment from Kubernates cluster
+delete-deployment:
+  
+  steps:
+  - bash-template
+  - kubectl:
+      name: delete deployement from kubernetes
+      server: $KUBERNETES_MASTER
+      token: $KUBERNETES_AUTH_TOKEN
+      insecure-skip-tls-verify: true
+      command: 
+
+

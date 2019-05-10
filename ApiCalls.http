@@ -13,4 +13,9 @@
 #   "cidrBlock": "172.16.0.0/16"
 # }
 
-GET https://iaas.us-phoenix-1.oraclecloud.com
+#GET https://iaas.us-phoenix-1.oraclecloud.com
+
+#curl -H 'Authorization: Bearer d59a3e3607fda7783d35202511c1893bf8559628a19e8fde7e8622024601f22f' https://app.wercker.com/api/v3/applications/wercker/
+
+#curl -H 'Authorization: Bearer d59a3e3607fda7783d35202511c1893bf8559628a19e8fde7e8622024601f22f' https://app.wercker.com/api/v3/applications/wercker/api/
+curl -H 'Authorization: Bearer d59a3e3607fda7783d35202511c1893bf8559628a19e8fde7e8622024601f22f' https://app.wercker.com/api/v3/applications/wercker/api
