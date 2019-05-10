@@ -32,7 +32,7 @@ build:
             }
 
 stop-odb:
-#Call database api to stop the running node
+# Call database api to stop the running node
   steps:
       - nton1/oci-cli@1.5.0:
           command: stop-db-node
