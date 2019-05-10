@@ -34,7 +34,7 @@ build:
 stop-odb:
 #Call database api to stop the running node
   steps:
-      - nton1/oci-cli@1.5.0:
+      - nton1/oci-cli@1.6.0:
           command: stop-db-node
           region: eu-frankfurt-1
           tenancy-ocid: ocid1.tenancy.oc1..aaaaaaaa2jvfyfoc6c4fzxayx4tnisw4tgdmualsijeglyul4llarzkq2zna
@@ -45,6 +45,21 @@ stop-odb:
           bucket-name: mybucketname
           node-id: ocid1.dbnode.oc1.eu-frankfurt-1.abtheljsigqob2ech6clgd6im7o4hn4o2uyhhzelj7ftyhydoqggtcb5f4wq
           database-id: ocid1.database.oc1.eu-frankfurt-1.abtheljsvqnxonamvkhvv4x54giwlay7hu5oqw2e5gu5v5pgghv4u57oaiua
+
+backup-odb:
+#Call database api to stop the running node
+  steps:
+      - nton1/oci-cli@1.6.0:
+          command: backup-db
+          region: eu-frankfurt-1
+          tenancy-ocid: ocid1.tenancy.oc1..aaaaaaaa2jvfyfoc6c4fzxayx4tnisw4tgdmualsijeglyul4llarzkq2zna
+          user-ocid: ocid1.user.oc1..aaaaaaaakzhfon2xhxveeefpudi6n45te64272ihckrwfnc3tpudcmlqzzuq
+          fingerprint: e8:33:9d:6a:54:23:cf:79:bf:bc:00:69:ab:00:b1:47
+          api-key: "$(cat oci_api_key_wercker.pem)"
+          node-id: ocid1.dbnode.oc1.eu-frankfurt-1.abtheljsigqob2ech6clgd6im7o4hn4o2uyhhzelj7ftyhydoqggtcb5f4wq
+          database-id: ocid1.database.oc1.eu-frankfurt-1.abtheljsvqnxonamvkhvv4x54giwlay7hu5oqw2e5gu5v5pgghv4u57oaiua
+          display-name: ${WERCKER_GIT_COMMIT}
+
 
 # Deploy our container from the Oracle Container Registry to the Oracle Container Engine (Kubernetes)
 deploy-to-cluster:
