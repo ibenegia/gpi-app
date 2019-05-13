@@ -31,7 +31,7 @@ metadata:
     app: genero-v1
 spec:
   ports:
-  - port: 30000
+  - port: 6394
     targetPort: 6394
   selector:
     app: genero-v1
