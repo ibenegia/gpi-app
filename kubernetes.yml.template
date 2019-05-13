@@ -22,4 +22,17 @@ spec:
           protocol: TCP
       imagePullSecrets:
         - name: wercker
-
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: genero-app-service-v3
+  labels:
+    app: genero-app
+spec:
+  ports:
+  - port: 6394
+  selector:
+    app: genero-app
+  type: LoadBalancer
+---
