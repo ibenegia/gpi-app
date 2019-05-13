@@ -28,12 +28,11 @@ kind: Service
 metadata:
   name: genero-app-service-v1
   labels:
-    app: genero-v1
+    app: genero-app
 spec:
   ports:
   - port: 6394
-    targetPort: 6394
   selector:
-    app: genero-v1
+    app: genero-app
   type: LoadBalancer
 ---
