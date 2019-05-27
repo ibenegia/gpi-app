@@ -33,7 +33,7 @@ build:
 
 
 start-odb:
-#Call database api to stop the running node
+#Call database api to start the running node
   steps:
       - nton1/oci-cli@1.6.1:
           command: start-db-node
@@ -59,7 +59,7 @@ stop-odb:
           database-id: ocid1.database.oc1.eu-frankfurt-1.abtheljsvqnxonamvkhvv4x54giwlay7hu5oqw2e5gu5v5pgghv4u57oaiua
 
 backup-odb:
-#Call database api to stop the running node
+#Call database api to perform a db-backup
   steps:
       - nton1/oci-cli@1.6.1:
           command: backup-db
