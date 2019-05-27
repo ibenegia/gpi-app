@@ -35,7 +35,7 @@ build:
 start-odb:
 #Call database api to stop the running node
   steps:
-      - nton1/oci-cli@1.6.0:
+      - nton1/oci-cli@1.6.1:
           command: start-db-node
           region: eu-frankfurt-1
           tenancy-ocid: ocid1.tenancy.oc1..aaaaaaaa2jvfyfoc6c4fzxayx4tnisw4tgdmualsijeglyul4llarzkq2zna
@@ -48,7 +48,7 @@ start-odb:
 stop-odb:
 #Call database api to stop the running node
   steps:
-      - nton1/oci-cli@1.6.0:
+      - nton1/oci-cli@1.6.1:
           command: stop-db-node
           region: eu-frankfurt-1
           tenancy-ocid: ocid1.tenancy.oc1..aaaaaaaa2jvfyfoc6c4fzxayx4tnisw4tgdmualsijeglyul4llarzkq2zna
@@ -61,7 +61,7 @@ stop-odb:
 backup-odb:
 #Call database api to stop the running node
   steps:
-      - nton1/oci-cli@1.6.0:
+      - nton1/oci-cli@1.6.1:
           command: backup-db
           region: eu-frankfurt-1
           tenancy-ocid: ocid1.tenancy.oc1..aaaaaaaa2jvfyfoc6c4fzxayx4tnisw4tgdmualsijeglyul4llarzkq2zna
