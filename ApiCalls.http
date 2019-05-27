@@ -13,9 +13,27 @@
 #   "cidrBlock": "172.16.0.0/16"
 # }
 
-#GET https://iaas.us-phoenix-1.oraclecloud.com
+GET https://iaas.us-phoenix-1.oraclecloud.com
 
-#curl -H 'Authorization: Bearer d59a3e3607fda7783d35202511c1893bf8559628a19e8fde7e8622024601f22f' https://app.wercker.com/api/v3/applications/wercker/
+POST /20160918/dbNodes/<dbNodeId>?action=stop
+Host: database.eu-frankfurt-1.oraclecloud.com
+<authorization and other headers>
 
-#curl -H 'Authorization: Bearer d59a3e3607fda7783d35202511c1893bf8559628a19e8fde7e8622024601f22f' https://app.wercker.com/api/v3/applications/wercker/api/
-curl -H 'Authorization: Bearer d59a3e3607fda7783d35202511c1893bf8559628a19e8fde7e8622024601f22f' https://app.wercker.com/api/v3/applications/wercker/api
+Authorization: Signature version="1",keyId="<tenancy_ocid>/<user_ocid>/<key_fingerprint>",algorithm="rsa-sha256",headers="(request-target) date x-content-sha256 content-type content-length",signature="Base64(RSA-SHA256(<signing_string>))"
+
+
+nkYG-q8Z-4JT
+  
+  
+docker.io/ivandocker7/test-node-image:master-a839744eaf8ac91800109db469dfa45d6198b0d7
+
+$ curl --include --request GET \
+--user dbcsadmin:password \
+--header "X-ID-TENANT-NAME:usexample" \
+https://dbaas.oraclecloud.com/paas/api/v1.1/instancemgmt/usexample/services/dbaas/instances/db12c-xp-si/accessrules
+
+
+curl --include --request GET \
+--user dbcsadmin:nkYG-q8Z-4JT \
+--header "ocid1.tenancy.oc1..aaaaaaaa2jvfyfoc6c4fzxayx4tnisw4tgdmualsijeglyul4llarzkq2zna:ocid1.user.oc1..aaaaaaaaewace64elihpapd4sd7af2bdc6qnz3r3tg7mgxch6n5x4aawdf2q" \
+https://dbaas.oraclecloud.com/paas/api/v1.1/instancemgmt/ocid1.user.oc1..aaaaaaaaewace64elihpapd4sd7af2bdc6qnz3r3tg7mgxch6n5x4aawdf2q/services/dbaas/instances/kubedb/accessrules
